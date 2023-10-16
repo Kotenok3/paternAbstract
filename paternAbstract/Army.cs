@@ -10,8 +10,14 @@ public class Army
         Units.Add(factory.CreateUnit());
     }
 
-    public void Add(IUnit unit)
+    public void AddArtillery()
     {
-        var factory = 1;
+        var factory = new ArtilleryArmyFactory();
+        Units.Add(factory.CreateUnit());
+    }
+    public void AddInfantry()
+    {
+        var factory = new InfantryArmyFactory();
+        Units.Add(factory.CreateUnit());
     }
 }
